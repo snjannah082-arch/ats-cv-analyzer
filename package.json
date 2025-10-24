@@ -1,0 +1,22 @@
+{
+  "name": "ats-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --filter=web",
+    "build": "turbo run build",
+    "start": "turbo run start --filter=web",
+    "storybook": "turbo run storybook --filter=app/ui",
+    "build-storybook": "turbo run build-storybook --filter=app/ui"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.6"
+  },
+  "overrides": {
+    "lucide-react": "^0.379.0"
+  },
+  "packageManager": "pnpm@8.15.4"
+}
